@@ -28,7 +28,7 @@ const SchoolLifeVideo = () => (
       <div className="grid md:grid-cols-3 gap-6">
         {videos.map((v) => (
           <div key={v.title} className="glass-card overflow-hidden group">
-            <div className="aspect-video bg-muted relative overflow-hidden">
+            <div className="aspect-[9/16] bg-muted relative overflow-hidden">
               <video
                 src={v.src}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
