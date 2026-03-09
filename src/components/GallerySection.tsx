@@ -9,7 +9,6 @@ const images = [
   { src: "/pictures/study2.png", alt: "Story time with teacher", span: "" },
   // 2 New Extra Images
   { src: "/pictures/event6.png", alt: "Special celebration", span: "md:col-span-2" },
-  { src: "/pictures/group photo.png", alt: "Students together", span: "" },
 ];
 
 const GallerySection = () => (
