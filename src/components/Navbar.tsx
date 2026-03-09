@@ -34,8 +34,8 @@ const Navbar = () => {
             />
           </div>
           <div className="flex flex-col">
-            <span className="font-black text-2xl tracking-tighter text-foreground leading-none">GENESIS INTERNATIONAL</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Montessori School</span>
+            <span className="font-black text-xl tracking-tighter text-foreground leading-none">GENESIS INTERNATIONAL</span>
+            <span className="text-[12px] uppercase tracking-[0.1em] font-bold text-primary">MONTESSORI SCHOOL</span>
           </div>
         </a>
 

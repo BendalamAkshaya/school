@@ -21,8 +21,8 @@ const Footer = () => (
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-black text-2xl tracking-tighter leading-none">GENESIS INTERNATIONAL</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Montessori School</span>
+              <span className="font-black text-xl tracking-tighter leading-none">GENESIS INTERNATIONAL</span>
+              <span className="text-[12px] uppercase tracking-[0.1em] font-bold text-primary">MONTESSORI SCHOOL</span>
             </div>
           </div>
           <p className="text-sm text-gray-400 leading-relaxed font-medium">Nurturing young minds with academic excellence, professional care, and a future-ready curriculum since 2010.</p>
