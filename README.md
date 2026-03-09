@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# GENESIS INTERNATIONAL MONTESSORI SCHOOL
 
-## Project info
+A professional, modern web application for GENESIS INTERNATIONAL MONTESSORI SCHOOL, featuring automated admissions, contact management, and a high-performance frontend.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Features
 
-## How can I edit this code?
+- **Automated Admissions**: Interactive modal form connected to Supabase for real-time enquiry tracking.
+- **Contact Management**: Integrated contact form with database storage.
+- **Google Sheets Sync**: Real-time synchronization of form submissions to Google Sheets via Supabase webhooks.
+- **Modern UI/UX**:
+  - High-performance React + Vite architecture.
+  - Custom "Our Programs" cards based on school pamphlets.
+  - Cinematic Portrait-style "School Life" video gallery.
+  - Fully responsive design using Tailwind CSS and Radix UI.
+- **Premium Aesthetics**: Smooth animations, glassmorphism effects, and custom branding throughout.
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, Shadcn UI, Lucide Icons
+- **Backend/DB**: Supabase (PostgreSQL)
+- **Automation**: Google Apps Script (Webhooks)
+- **Deployment**: Vercel
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## ⚙️ Setup & Installation
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### 1. Clone the repository
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/srinivasthalada7781/school.git
+cd school
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 2. Install dependencies
+```sh
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 3. Environment Variables
+Create a `.env.local` file in the root directory and add your Supabase credentials:
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 4. Run locally
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🌐 Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project is optimized for deployment on **Vercel**. 
+1. Connect your GitHub repository to Vercel.
+2. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` to the **Environment Variables** in your Vercel project settings.
+3. Deploy!
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📄 License
+Generic License - Genesis International Montessori School.
