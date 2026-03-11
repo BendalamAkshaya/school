@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Menu, X, GraduationCap, Home, Info, BookOpen, Warehouse, Image, Sparkles, Phone, Pencil, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Facilities", href: "#facilities" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Activities", href: "#activities" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "#home", Icon: Home, color: "bg-sky-light text-sky" },
+  { label: "About", href: "#about", Icon: Info, color: "bg-mint-light text-mint" },
+  { label: "Programs", href: "#programs", Icon: BookOpen, color: "bg-rose-light text-rose" },
+  { label: "Facilities", href: "#facilities", Icon: Warehouse, color: "bg-sunshine/10 text-secondary" },
+  { label: "Gallery", href: "#gallery", Icon: Image, color: "bg-lavender-light text-lavender" },
+  { label: "Activities", href: "#activities", Icon: Palette, color: "bg-peach-light text-peach" },
+  { label: "Contact", href: "#contact", Icon: Phone, color: "bg-sky-light text-sky" },
 ];
 
 const Navbar = () => {
@@ -43,41 +44,53 @@ const Navbar = () => {
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-2">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-semibold text-muted-foreground hover:text-primary transition-colors"
+              className="group relative px-4 py-2 rounded-full transition-all duration-300 hover:scale-105"
             >
-              {l.label}
+              <div className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${l.color.split(' ')[0]}`} />
+              <div className="relative flex items-center gap-2">
+                <l.Icon size={18} className={`transition-transform duration-300 group-hover:rotate-12 ${l.color.split(' ')[1]}`} />
+                <span className="text-sm font-bold text-muted-foreground group-hover:text-foreground transition-colors">
+                  {l.label}
+                </span>
+              </div>
             </a>
           ))}
-          <Button variant="hero" size="sm" asChild>
+          <Button variant="hero" size="sm" className="ml-4 rounded-full px-6 shadow-soft" asChild>
             <a href="#admissions">Admissions Open</a>
           </Button>
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
+        <button className="lg:hidden text-foreground w-12 h-12 flex items-center justify-center rounded-xl bg-muted" onClick={() => setOpen(!open)}>
+          {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-card/95 backdrop-blur-md border-t border-border/50 px-4 pb-4 animate-fade-in">
+        <div className="lg:hidden bg-card/95 backdrop-blur-md border-t border-border/50 p-4 space-y-2 animate-in slide-in-from-top duration-300">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block py-3 text-sm font-semibold text-muted-foreground hover:text-primary transition-colors border-b border-border/30 last:border-b-0"
+              className={cn(
+                "flex items-center gap-4 p-4 rounded-2xl text-base font-bold transition-all active:scale-95",
+                l.color
+              )}
             >
+              <div className="w-10 h-10 rounded-xl bg-white/80 flex items-center justify-center shadow-sm">
+                <l.Icon size={24} />
+              </div>
               {l.label}
             </a>
           ))}
-          <Button variant="hero" className="w-full mt-3" size="sm" asChild>
+          <Button variant="hero" className="w-full h-14 text-lg rounded-2xl mt-4 shadow-premium" size="lg" asChild>
             <a href="#admissions">Admissions Open</a>
           </Button>
         </div>
