@@ -13,7 +13,8 @@ const HeroSection = () => {
         <img
           src="/pictures/group photo 2.png"
           alt="School Environment"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: '50% 15%' }}
         />
         <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px]" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
