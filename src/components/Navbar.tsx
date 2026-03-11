@@ -65,7 +65,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="lg:hidden text-foreground w-12 h-12 flex items-center justify-center rounded-xl bg-muted" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-foreground w-12 h-12 flex items-center justify-center rounded-xl bg-white/20 backdrop-blur-md" onClick={() => setOpen(!open)}>
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>

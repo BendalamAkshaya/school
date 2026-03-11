@@ -16,8 +16,8 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
           style={{ objectPosition: '50% 20%' }}
         />
-        <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
+        <div className="absolute inset-0 bg-black/10" />
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-background to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
