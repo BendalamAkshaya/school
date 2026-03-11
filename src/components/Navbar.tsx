@@ -4,13 +4,13 @@ import { Menu, X, GraduationCap, Home, Info, BookOpen, Warehouse, Image, Sparkle
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Home", href: "#home", Icon: Home, color: "bg-sky-light text-sky" },
-  { label: "About", href: "#about", Icon: Info, color: "bg-mint-light text-mint" },
-  { label: "Programs", href: "#programs", Icon: BookOpen, color: "bg-rose-light text-rose" },
-  { label: "Facilities", href: "#facilities", Icon: Warehouse, color: "bg-sunshine/10 text-secondary" },
-  { label: "Gallery", href: "#gallery", Icon: Image, color: "bg-lavender-light text-lavender" },
-  { label: "Activities", href: "#activities", Icon: Palette, color: "bg-peach-light text-peach" },
-  { label: "Contact", href: "#contact", Icon: Phone, color: "bg-sky-light text-sky" },
+  { label: "Home", href: "#home", color: "bg-[#FF9AA2]", rotate: "-2deg" },
+  { label: "About", href: "#about", color: "bg-[#FFB7B2]", rotate: "3deg" },
+  { label: "Programs", href: "#programs", color: "bg-[#FFDAC1]", rotate: "-1deg" },
+  { label: "Facilities", href: "#facilities", color: "bg-[#E2F0CB]", rotate: "2deg" },
+  { label: "Gallery", href: "#gallery", color: "bg-[#B5EAD7]", rotate: "-3deg" },
+  { label: "Activities", href: "#activities", color: "bg-[#C7CEEA]", rotate: "1deg" },
+  { label: "Contact", href: "#contact", color: "bg-[#FF9AA2]", rotate: "-2deg" },
 ];
 
 const Navbar = () => {
@@ -44,23 +44,22 @@ const Navbar = () => {
         </a>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-1">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="group relative px-4 py-2 rounded-full transition-all duration-300 hover:scale-105"
+              className="group relative px-5 py-2 transition-all duration-300 hover:-translate-y-1 active:scale-95"
+              style={{ transform: `rotate(${l.rotate})` }}
             >
-              <div className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${l.color.split(' ')[0]}`} />
-              <div className="relative flex items-center gap-2">
-                <l.Icon size={18} className={`transition-transform duration-300 group-hover:rotate-12 ${l.color.split(' ')[1]}`} />
-                <span className="text-sm font-bold text-muted-foreground group-hover:text-foreground transition-colors">
-                  {l.label}
-                </span>
-              </div>
+              <div className={`absolute inset-0 ${l.color} opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-sm`}
+                style={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }} />
+              <span className="relative text-sm font-fredoka font-bold text-muted-foreground group-hover:text-[#133a5d] transition-colors tracking-wide">
+                {l.label}
+              </span>
             </a>
           ))}
-          <Button variant="hero" size="sm" className="ml-4 rounded-full px-6 shadow-soft" asChild>
+          <Button variant="hero" size="sm" className="ml-4 rounded-full px-6 shadow-soft font-fredoka" asChild>
             <a href="#admissions">Admissions Open</a>
           </Button>
         </div>
@@ -73,24 +72,24 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-card/95 backdrop-blur-md border-t border-border/50 p-4 space-y-2 animate-in slide-in-from-top duration-300">
-          {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className={cn(
-                "flex items-center gap-4 p-4 rounded-2xl text-base font-bold transition-all active:scale-95",
-                l.color
-              )}
-            >
-              <div className="w-10 h-10 rounded-xl bg-white/80 flex items-center justify-center shadow-sm">
-                <l.Icon size={24} />
-              </div>
-              {l.label}
-            </a>
-          ))}
-          <Button variant="hero" className="w-full h-14 text-lg rounded-2xl mt-4 shadow-premium" size="lg" asChild>
+        <div className="lg:hidden bg-card/95 backdrop-blur-md border-t border-border/50 p-6 space-y-4 animate-in slide-in-from-top duration-300">
+          <div className="grid grid-cols-2 gap-4">
+            {navLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "flex items-center justify-center p-4 rounded-2xl text-lg font-fredoka font-bold shadow-soft transition-all active:scale-95",
+                  l.color
+                )}
+                style={{ transform: `rotate(${l.rotate})` }}
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+          <Button variant="hero" className="w-full h-14 text-xl font-fredoka rounded-2xl mt-4 shadow-premium" size="lg" asChild>
             <a href="#admissions">Admissions Open</a>
           </Button>
         </div>
