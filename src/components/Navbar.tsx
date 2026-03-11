@@ -17,7 +17,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border shadow-soft transition-all duration-300">
       <div className="container mx-auto flex items-center justify-between h-28 px-4">
         <a href="#home" className="flex items-center gap-3 group">
           <div className="w-24 h-24 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 animate-in zoom-in spin-in-12 duration-700 ease-out">
@@ -65,7 +65,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="lg:hidden text-foreground w-12 h-12 flex items-center justify-center rounded-xl bg-white/20 backdrop-blur-md" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-foreground w-12 h-12 flex items-center justify-center rounded-xl bg-muted" onClick={() => setOpen(!open)}>
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
