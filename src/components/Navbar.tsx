@@ -17,9 +17,9 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-border shadow-soft">
-      <div className="container mx-auto flex items-center justify-between h-20 px-4">
+      <div className="container mx-auto flex items-center justify-between h-28 px-4">
         <a href="#home" className="flex items-center gap-3 group">
-          <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 animate-in zoom-in spin-in-12 duration-700 ease-out">
+          <div className="w-24 h-24 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 animate-in zoom-in spin-in-12 duration-700 ease-out">
             <img
               src="/pictures/Genesis Stem Final Logo.png"
               alt="Genesis International Montessori and STEM School Logo"
