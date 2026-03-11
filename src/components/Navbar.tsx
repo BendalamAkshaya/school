@@ -49,12 +49,12 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="group relative px-5 py-2 transition-all duration-300 hover:-translate-y-1 active:scale-95"
+              className="group relative px-6 py-2 transition-all duration-300 hover:-translate-y-1 active:scale-95 flex items-center justify-center"
               style={{ transform: `rotate(${l.rotate})` }}
             >
-              <div className={`absolute inset-0 ${l.color} opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-sm`}
+              <div className={`absolute inset-0 ${l.color} transition-all duration-300 shadow-sm`}
                 style={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }} />
-              <span className="relative text-sm font-fredoka font-bold text-muted-foreground group-hover:text-[#133a5d] transition-colors tracking-wide">
+              <span className="relative text-sm font-fredoka font-bold text-[#133a5d] transition-colors tracking-wide">
                 {l.label}
               </span>
             </a>
