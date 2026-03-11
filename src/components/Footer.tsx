@@ -69,6 +69,7 @@ const Footer = () => (
 
       <div className="border-t border-primary-foreground/10 mt-8 pt-6 text-center text-sm opacity-60">
         <p>© 2026 Genesis International Montessori and STEM School. All rights reserved.</p>
+        <p className="mt-2 text-[10px] tracking-widest font-fredoka uppercase opacity-80">Developed by Edu Alt Tech</p>
       </div>
     </div>
   </footer>
