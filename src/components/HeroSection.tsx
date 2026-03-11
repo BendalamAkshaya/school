@@ -7,14 +7,13 @@ const FloatingShape = ({ className }: { className?: string }) => (
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-32">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-40">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-x-0 bottom-0 top-28 z-0">
         <img
           src="/pictures/group photo 2.png"
           alt="School Environment"
-          className="w-full h-full object-cover"
-          style={{ objectPosition: '50% 15%' }}
+          className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px]" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
